@@ -1,0 +1,229 @@
+/* Reset some basic elements for consistency across browsers */
+body, h1, p, ul, li, input, button {
+    margin: 0p;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the overall page background and typography */
+body {
+    font-family: "Gill Sans", sans-serif;
+    background-color: #FFCD9E;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for main content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    padding: 20px 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Content section */
+.content {
+    flex: 1;
+    max-width: 750px;
+    min-width: 300px; /* Ensures minimum width on small screens */
+    padding-right: 20px; /* Space between content and image */
+    margin-left: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+p {
+    font-size: 1.3em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.subtext {
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.email-form {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    
+    flex-wrap: wrap; /* Allow input and button to wrap */
+}
+
+input[type="email"] {
+    padding: 15px 20px;
+    font-size: 1em;
+    border: 4px solid#333;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 10px;  
+    margin-bottom: 10px; /* Space when wrapping */
+    min-width: 250px; /* Prevents input from becoming too small */
+}
+
+input[type="email"]::placeholder {
+    color: #aaa;
+    font-weight: bold;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 4px solid #333;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:active {
+    background-color: #555;
+}
+
+.free-note {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #f9f5f5;
+    text-align: center;
+}
+
+/* Image section */
+.image {
+    flex: 1;
+    max-width: 500px; /* Limits the size on larger screens */
+    min-width: 250px; /* Ensures minimum width */
+    margin: 10px auto; /* Centers image on smaller screens */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures proper rendering */
+}
+
+/* Footer styles */
+footer {
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-left, .footer-right {
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.footer-left li {
+    margin: 20px 2px;
+    text-align: left;
+    list-style: none;
+}
+
+.footer-right li {
+    margin: 10px 25px;
+    list-style: none;
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-left: 130px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .image {
+        order: -1; /* Display image above content on smaller screens */
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .content, .image {
+        max-width: 100%; /* Full width on small screens */
+        text-align: center; /* Center-align text */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-right: 20px;
+       margin-bottom: 20px;
+        
+    }
+
+    p {
+       font-size: 1em;
+       padding: 10px;
+       margin: auto;
+       margin-left: 20px;
+       margin-right: 20px;
+       margin-bottom: 20px;
+    }
+
+    input[type="email"], button {
+        width: 120%;
+        
+        margin:auto;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        width: 80%;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+}
